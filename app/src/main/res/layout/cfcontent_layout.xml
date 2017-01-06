@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/cdcontent_iv"
+        android:padding="5dp"
+        android:src="@drawable/cl"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/cfTitle"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/cdcontent_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="怕怕时间到啦科技时代卡拉手机里的科技adsl啊是大慧寺大师德鲁克觉得"
+        android:singleLine="true"/>
+    <TextView
+        android:id="@+id/userNmae"
+        android:layout_toRightOf="@id/cdcontent_iv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/cfTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="阿迪斯"/>
+    <ImageView
+        android:id="@+id/like"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/cdcontent_iv"
+        android:layout_below="@id/userNmae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_details_toolbar_praise_normal"/>
+
+    <TextView
+        android:id="@+id/cf_like"
+        android:layout_marginLeft="3dp"
+        android:layout_alignBottom="@id/like"
+        android:layout_toRightOf="@id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="31748120"/>
+
+    <ImageView
+        android:id="@+id/say"
+        android:src="@drawable/bg_comic_detail_comment_more_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/like"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/cf_like"/>
+
+    <TextView
+        android:id="@+id/cf_say"
+        android:textSize="16sp"
+        android:layout_marginLeft="3dp"
+        android:layout_alignBottom="@id/like"
+        android:layout_toRightOf="@id/say"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31748120"/>
+
+</RelativeLayout>

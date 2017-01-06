@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/author_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--可以折叠的布局-->
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/author_coToolbar"
+            app:collapsedTitleGravity="center"
+            app:expandedTitleGravity="center"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_personal"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="#ba000000">
+
+            <!--中间的图片-->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="210dp"
+             android:orientation="vertical">
+
+             <FrameLayout
+                 android:layout_marginTop="30dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+                 <ImageView
+                     android:id="@+id/author_userHead"
+                     android:layout_gravity="center"
+                     android:scaleType="fitXY"
+                     app:layout_collapseMode="parallax"
+                     app:layout_collapseParallaxMultiplier="0"
+                     android:src="@drawable/deth"
+                     android:layout_width="55dp"
+                     android:layout_height="55dp"/>
+                 <ImageView
+                     android:layout_gravity="center"
+                     app:layout_collapseMode="parallax"
+                     app:layout_collapseParallaxMultiplier="0"
+                     android:src="@drawable/ic_v_author_detail_avatar_normal"
+                     android:layout_width="65dp"
+                     android:layout_height="65dp" />
+             </FrameLayout>
+
+             <View
+                 android:layout_width="1dp"
+                 android:layout_height="33dp"/>
+
+             <FrameLayout
+                 android:layout_gravity="center_horizontal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/bg_circle_cancel_pressed"/>
+                <TextView
+                    android:id="@+id/author_fsNumber"
+                    android:layout_gravity="center"
+                    android:text="22万粉丝"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#E3CA2A"/>
+             </FrameLayout>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/author_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:text="认证：快看漫画签约作者，代表作《整容游戏》"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"/>
+
+         </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/author_toolbar"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <ImageView
+                    android:id="@+id/taiao_conte"
+                    android:onClick="author_back"
+                    android:foregroundGravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toolbar_select"/>
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:background="#fff"
+            android:id="@+id/author_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="#000"
+            app:tabTextColor="#D0D0D0"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="#FFBA15"
+            app:tabIndicatorHeight="3dp" />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

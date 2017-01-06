@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--可以折叠的布局-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            app:collapsedTitleGravity="center_horizontal"
+            app:expandedTitleGravity="left|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="#6000">
+
+            <!--中间的图片-->
+            <ImageView
+                android:id="@+id/manHua_iv"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:src="@drawable/ic_common_placeholder_l_1280"/>
+
+
+
+            <LinearLayout
+                app:layout_collapseParallaxMultiplier="0"
+                android:gravity="center_vertical"
+                android:padding="7dp"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gztv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9E9C9E"
+                    android:text="637万人关注"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_details_toolbar_praise_normal"/>
+                <TextView
+                    android:id="@+id/gooLike"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9E9C9E"
+                    android:text="5253万"/>
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_comic_detail_comment_more_normal"/>
+                <TextView
+                    android:id="@+id/gotoSay"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9E9C9E"
+                    android:text="5253万"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/taiao_content_backiv"
+                    android:onClick="back"
+                    android:foregroundGravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/toolbar_select"/>
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/goto_tabLayout"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="#000"
+            app:tabTextColor="#D0D0D0"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="#FFBA15"
+            app:tabIndicatorHeight="3dp" />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/goto_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

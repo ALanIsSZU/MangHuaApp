@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/anthorSencodeHead"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_v_comment_avatar"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/anthorSencodeName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:text="密会情人--出轨俱乐部"
+            android:textColor="#F45C4F"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/anthorSencodeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="工作室的小王子还是那么萌那么治愈.疲劳一扫而光啊"
+        android:textColor="#000"
+        android:textSize="15sp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/anthorSencodeItemRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/anthorSencodeTime"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:text="12-21 10:00"
+            android:textColor="#7190C5"
+            android:textSize="13sp"
+            />
+        <CheckBox
+            android:id="@+id/bt_gc_likes"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:button="@null"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_details_toolbar_praise_normal"
+            />
+        <TextView
+            android:id="@+id/anthorSencodeLike"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="653032"
+            android:singleLine="true"
+            android:textSize="10sp"
+            android:textColor="#BFBFBF"
+            />
+        <Button
+            android:id="@+id/gc_bt_count"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_comic_detail_comment_more_normal"
+            />
+        <TextView
+            android:id="@+id/anthorSencodSay"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="653032"
+            android:textSize="10sp"
+            android:textColor="#BFBFBF"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

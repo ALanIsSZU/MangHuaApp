@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mh_rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="10dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:checked="true"
+                android:button="@null"
+                android:gravity="center"
+                android:background="@drawable/remen_selector"
+                android:text="热门"
+                android:textColor="@drawable/rb_text_color"
+                android:textSize="15sp"
+                />
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/guanzhu_selector"
+                android:text="关注"
+                android:textColor="@drawable/rb_text_color"
+                android:textSize="15sp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:drawableBottom="@null"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bt_search"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFAFA"
+        >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
